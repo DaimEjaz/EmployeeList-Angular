@@ -1,5 +1,6 @@
 export class Employee{
-    empId!: number;
-    empName !: string;
-    yearJoined !: number;
+    Id!: number;
+    StudentName !: string;
+    Address !: string;
+    AdmissionYear !: number;
 }

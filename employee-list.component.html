@@ -1,0 +1,5 @@
+<h2>Employee List: </h2>
+
+<ul class="employee-list" *ngFor="let employee of employees$">
+    <li (click)="empClick(employee)">{{employee.name}}</li>
+</ul>

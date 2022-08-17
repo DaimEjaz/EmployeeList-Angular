@@ -15,6 +15,7 @@ export class EmployeeContainerComponent implements OnInit {
   }
 
   empSelect(employee: Employee){
+    //saving the object received from the list on the container
     this.fetchedEmployee = employee;
   }
 

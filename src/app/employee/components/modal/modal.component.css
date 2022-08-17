@@ -1,0 +1,21 @@
+.btn-sm{
+    padding: 0;
+}
+
+.modal{
+    padding: 20px;
+}
+
+.sub-field{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.sub-field input{
+    padding: 3px 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}

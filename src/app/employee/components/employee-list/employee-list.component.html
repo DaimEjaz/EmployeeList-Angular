@@ -1,5 +1,17 @@
+<app-modal modalId="updateModal" [show]="this.updateClicked"></app-modal>
+
 <h2>Employee List: </h2>
 
-<ul class="employee-list" *ngFor="let employee of employees">
-    <li (click)="empClick(employee)">{{employee.StudentName}}</li>
-</ul>
+<!-- <ul class="employee-list" *ngFor="let employee of employees$">
+    <li (click)="empClick(employee)">{{employee.name}}</li>
+</ul> -->
+<table class="table">
+    <thead>
+    </thead>
+    <tbody class="employee-list" *ngFor="let employee of employees$">
+        <tr class="row" ><span class="nameSpan" (click)="empClick(employee)">{{employee.name}}</span> <span class="btnSpan"><app-button text="Update" color="green" data-bs-toggle="modal" data-bs-target="#updateModal" (btnClick)="update(employee)"></app-button>
+            <app-button text="Delete" color="red" (btnClick)="deleteEmp(employee)"></app-button></span></tr>
+        
+
+    </tbody>
+</table>

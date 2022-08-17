@@ -5,6 +5,7 @@ import { EmployeeDetailsComponent } from './components/employee-details/employee
 import { EmployeeContainerComponent } from './components/employee-container/employee-container.component';
 import { EmployeeListService } from './services/employee-list.service';
 import { ButtonComponent } from './components/button/button.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -13,7 +14,8 @@ import { ButtonComponent } from './components/button/button.component';
     EmployeeListComponent,
     EmployeeDetailsComponent,
     EmployeeContainerComponent,
-    ButtonComponent
+    ButtonComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule

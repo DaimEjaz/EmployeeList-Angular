@@ -9,17 +9,30 @@ import { EmployeeListService } from '../../services/employee-list.service';
 })
 export class EmployeeListComponent implements OnInit {
 
-  employees!: Employee[];
+  employees$!: Employee[];
+  updateClicked?: boolean = false;
     
   @Output() btnClick = new EventEmitter<Employee>();
   constructor(private employeeListService : EmployeeListService) { }
 
   ngOnInit(): void {
-    this.employeeListService.getEmployees().subscribe(data => this.employees = data);
+    //this.employeeListService.getEmployees().subscribe(data => this.employees$ = data);
+    this.employees$ = this.employeeListService.getEmployees();
+    console.log(this.employees$);
   }
 
   empClick(employee: Employee){
     this.btnClick.emit(employee)
+  }
+
+  update(employee: Employee){
+    this.updateClicked = true;
+    alert("Update")
+  }
+
+  deleteEmp(employee: Employee){
+    alert("Delete")
+
   }
 
 }
